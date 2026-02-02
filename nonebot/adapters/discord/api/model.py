@@ -2005,7 +2005,7 @@ class Guild(BaseModel):
     explicit_content_filter: ExplicitContentFilterLevel
     roles: list["Role"]
     emojis: list[Emoji]
-    features: list[GuildFeature]
+    features: list[Union[GuildFeature, str]]
     mfa_level: MFALevel
     application_id: Optional[Snowflake] = Field(...)
     system_channel_id: Optional[Snowflake] = Field(...)
